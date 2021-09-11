@@ -11,7 +11,7 @@ export default function Layout({children}: Props): ReactElement {
     return (
         <>
             <Header/>
-            <main>{children}</main>
+                <main>{children}</main>
             <Footer/>
         </>
     )

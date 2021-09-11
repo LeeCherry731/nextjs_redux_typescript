@@ -6,7 +6,7 @@ interface Props {
     
 }
 
-function _app({ Component, pageProps}: AppProps) {
+function _app({ Component, pageProps }: AppProps) {
     return (
         <>
             <Component {...pageProps}/>
@@ -14,4 +14,4 @@ function _app({ Component, pageProps}: AppProps) {
     )
 }
 
-export default _app;
+export default wrapper.withRedux(_app);

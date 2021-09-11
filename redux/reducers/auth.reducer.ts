@@ -1,5 +1,4 @@
-import { LOGIN } from "../types"
-import {Account} from "../../types/Account"
+import * as types from "../types"
 
 
 const initialState = {
@@ -7,11 +6,15 @@ const initialState = {
     user: null,
 }
 
+export interface stateTypes {
+    token: string | null,
+    user: string | null;
+}
 
 export default (state = initialState, { type, payload }) => {
     switch (type) {
 
-    case LOGIN:
+    case types.LOGIN:
         return { ...state, token: payload.token, user: payload.user.username };
 
     default:

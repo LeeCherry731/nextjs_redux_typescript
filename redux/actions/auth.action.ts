@@ -9,7 +9,7 @@ const setLoginAction = (payload) => ({
 export const login = ({username, password}: Account) => {
     return dispatch => {
         setTimeout(() => { 
-            dispatch(setLoginAction({token: "1234", user: {username}}))
-        })
+            dispatch(setLoginAction({token: "123456789", user: {username}}))
+        }, 3000);
     }
 }
