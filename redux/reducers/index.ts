@@ -1,20 +1,8 @@
-import { LOGIN } from "../types"
-import {Account} from "../../types/Account"
+import { combineReducers } from "redux";
+import authReducer from "./auth.reducer";
 
+const rootReducer = combineReducers({
+    authentication: authReducer,
+});
 
-const initialState = {
-    token: null,
-    user: null,
-}
-
-
-export default (state = initialState, { type, payload }) => {
-    switch (type) {
-
-    case LOGIN:
-        return { ...state, token: payload.token}
-
-    default:
-        return state
-    }
-}
+export default rootReducer;
